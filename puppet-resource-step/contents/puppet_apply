@@ -13,8 +13,8 @@ LOGLEVEL=$1; shift;
 MANIFEST=$1; shift;
 
 if [[ "${SUDO}" == true ]]
-then PUPPET_CMD="sudo puppet apply"
-else PUPPET_CMD="puppet apply"
+then PUPPET_CMD="sudo puppet resource"
+else PUPPET_CMD="puppet resource"
 fi
 
 if [[ "${LOGLEVEL}" == DEBUG ]]

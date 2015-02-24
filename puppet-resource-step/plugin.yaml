@@ -1,16 +1,16 @@
-name: puppet-apply-step
+name: puppet-resource-step
 version: 1.0
 rundeckPluginVersion: 1.0
-author: Alex Honor
+author: Alex Honor,Bhanu Kolli
 date: 05/21/14
 providers:
-  - name: puppet-apply-step
+  - name: puppet-resource-step
     service: RemoteScriptNodeStep
-    title: Puppet Apply
+    title: Puppet resource
     description: Apply a standalone Puppet manifest to the local system.
     plugin-type: script
     script-interpreter: /bin/bash
-    script-file: puppet_apply
+    script-file: puppet_resource
     script-args: '${config.sudo} ${job.loglevel} ${config.manifest} ${config.arguments}'
     config:
       - type: String
